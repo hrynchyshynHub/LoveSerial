@@ -347,7 +347,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
         public void forGitLearn(){
             System.out.println("Learn git !!");
+            System.out.println("git 2");
         }
+
     }
 }
 

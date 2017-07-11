@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@mipmap/ic_launcher_house"
+            android:title="Моя сторінка" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/ic_launcher_friends"
+            android:title="Новини від підписників" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/ic_launcher_news"
+            android:title="Новини з світу серіалів" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@mipmap/ic_launcher_groups"
+            android:title="Мої групи" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/ic_launcher_settings"
+                android:title="Мої налаштування" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@mipmap/ic_launcher_exit"
+                android:title="Вихід" />
+        </menu>
+    </item>
+
+</menu>

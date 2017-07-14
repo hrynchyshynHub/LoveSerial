@@ -1,5 +1,7 @@
 package com.example.vania.loveserials;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,9 +16,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.vania.loveserials.fragments.MyProfileFragment;
+
 public class NavigationMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private MyProfileFragment myProfileFragment ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,7 @@ public class NavigationMenu extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+        myProfileFragment = new MyProfileFragment();
     }
 
     @Override
@@ -82,9 +88,9 @@ public class NavigationMenu extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            ftrans.replace(R.id.container, myProfileFragment);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -96,6 +102,7 @@ public class NavigationMenu extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
+        ftrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

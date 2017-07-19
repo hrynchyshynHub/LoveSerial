@@ -16,12 +16,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.vania.loveserials.fragments.MyProfileFragment;
+//import com.example.vania.loveserials.fragments.MyProfileFragment;
 
 public class NavigationMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private MyProfileFragment myProfileFragment ;
+    //private MyProfileFragment myProfileFragment ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,7 @@ public class NavigationMenu extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-        myProfileFragment = new MyProfileFragment();
+        //myProfileFragment = new MyProfileFragment();
     }
 
     @Override
@@ -90,7 +90,7 @@ public class NavigationMenu extends AppCompatActivity
         int id = item.getItemId();
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
         if (id == R.id.nav_camera) {
-            ftrans.replace(R.id.container, myProfileFragment);
+            //ftrans.replace(R.id.container, myProfileFragment);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vania.loveserials.fragments.MyProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Vania Hrynchyshyn"
+                android:textStyle="normal"
+                android:id="@+id/UserName"
+                android:textSize="15dp"
+                android:textColor="@color/accent"
+                />
+
+          <ImageView
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:src="@drawable/ava"
+                android:layout_gravity="center"
+                android:id="@+id/MainImage"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow"
+                android:layout_gravity="center"
+                android:id="@+id/FollowButton"
+                android:background="@color/colorPrimaryDark"
+                />
+            <EditText
+                android:id="@+id/MyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:hint="Enter your status"
+                android:background="@drawable/edit_text_style"
+                android:focusable="false"
+                ></EditText>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:onClick="ClickToChangeStatus"
+                android:id="@+id/ChangeStatus"
+                android:layout_gravity="center"
+                />
+
+
+
+        </LinearLayout>
+
+</FrameLayout>

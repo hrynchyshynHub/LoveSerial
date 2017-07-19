@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,13 +16,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
-//import com.example.vania.loveserials.fragments.MyProfileFragment;
+import com.example.vania.loveserials.fragments.MyProfileFragment;
 
 public class NavigationMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    //private MyProfileFragment myProfileFragment ;
+    EditText editStatus;
+    private MyProfileFragment myProfileFragment ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +32,7 @@ public class NavigationMenu extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,7 +44,7 @@ public class NavigationMenu extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-        //myProfileFragment = new MyProfileFragment();
+        myProfileFragment = new MyProfileFragment();
     }
 
     @Override
@@ -90,7 +86,7 @@ public class NavigationMenu extends AppCompatActivity
         int id = item.getItemId();
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
         if (id == R.id.nav_camera) {
-            //ftrans.replace(R.id.container, myProfileFragment);
+            ftrans.replace(R.id.container, myProfileFragment);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -107,5 +103,21 @@ public class NavigationMenu extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void ClickToChangeStatus(View view)
+    {
+        Button changeButton = (Button)findViewById(R.id.ChangeStatus);
+        if(changeButton.getText().toString().equals("Edit")) {
+            changeButton.setText("Save");
+            editStatus = (EditText) findViewById(R.id.MyStatus);
+            editStatus.setFocusableInTouchMode(true);
+        }
+        else if(changeButton.getText().toString().equals("Save"))
+        {
+            changeButton.setText("Edit");
+            editStatus.setFocusable(false);
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.vania.loveserials;
 
+import android.app.ActivityOptions;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class NavigationMenu extends AppCompatActivity
     EditText editStatus;
     private MyProfileFragment myProfileFragment ;
     private SerialsListFragment serialsListFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,8 @@ public class NavigationMenu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        startActivity(intent, ActivityOptions
+                .makeSceneTransitionAnimation(this).toBundle());
         myProfileFragment = new MyProfileFragment();
         serialsListFragment = new SerialsListFragment();
     }

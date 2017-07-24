@@ -4,28 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="4dp"
-    android:weightSum="1"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:padding="0dp"
+    android:weightSum="1">
 
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="195dp"
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/serial_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/flash"
+        android:clickable="true"
+        android:onClick="ClickToChangeStatus"
+        android:transitionName="serialsAnim"
         app:srcCompat="@drawable/flash" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1.81">
+        android:layout_weight="1.81"
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:text="@string/serial_description" />
+            android:layout_width="319dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="Flash"
+            android:textSize="32sp" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="32 324 followers" />
     </LinearLayout>
 
 </LinearLayout>

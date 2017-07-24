@@ -23,4 +23,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="MainPage">Моя сторінка</string>
+    <string name="feed">Новини від підписників</string>
+    <string name="feed_from_serials">Новини з світу серіалів</string>
+    <string name="my_serials">Мої групи</string>
 </resources>

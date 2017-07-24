@@ -5,19 +5,19 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@mipmap/ic_launcher_house"
-            android:title="Моя сторінка" />
+            android:title="@string/MainPage" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@mipmap/ic_launcher_friends"
-            android:title="Новини від підписників" />
+            android:title="@string/feed" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@mipmap/ic_launcher_news"
-            android:title="Новини з світу серіалів" />
+            android:title="@string/feed_from_serials" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_serials"
             android:icon="@mipmap/ic_launcher_groups"
-            android:title="Мої групи" />
+            android:title="@string/my_serials" />
     </group>
 
     <item android:title="Communicate">

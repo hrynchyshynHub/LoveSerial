@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class App extends Application {
     private static LoveSerialsApi loveSerialsApi;
     private Retrofit retrofit;
-    private static final String BASE_URL = "http://www.loveserials.com/";
+    private static final String BASE_URL = "http://www.loveserials.com/api/";
 
     @Override
     public void onCreate() {

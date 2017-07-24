@@ -73,7 +73,7 @@ public class SignupActivity extends AppCompatActivity {
                         // depending on success
                         onSignupSuccess();
                         // onSignupFailed();
-                        progressDialog.dismiss( );
+                        progressDialog.dismiss();
                     }
                 }, 3000);
     }
@@ -120,5 +120,8 @@ public class SignupActivity extends AppCompatActivity {
         }
 
         return valid;
+    }
+    private void insertUser(){
+
     }
 }

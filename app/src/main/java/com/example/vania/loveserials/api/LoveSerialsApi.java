@@ -13,6 +13,6 @@ import retrofit2.http.Path;
  */
 
 public interface LoveSerialsApi {
-    @GET("/api/get/{id}")
+    @GET("get/{id}")
     Call<List<UserModel>> getUser(@Path("id")int userId);
 }

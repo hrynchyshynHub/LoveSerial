@@ -11,8 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.vania.loveserials.R;
-import com.example.vania.loveserials.fragments.dummy.DummyContent;
-import com.example.vania.loveserials.fragments.dummy.DummyContent.DummyItem;
+import com.example.vania.loveserials.fragments.serial.SerialContent;
+import com.example.vania.loveserials.fragments.serial.SerialContent.SerialItem;
+import com.example.vania.loveserials.fragments.serial.SerialContent;
 
 import java.util.List;
 
@@ -70,7 +71,7 @@ public class SerialsListFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(SerialContent.ITEMS, mListener));
         }
         return view;
     }
@@ -105,6 +106,6 @@ public class SerialsListFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(SerialContent.SerialItem item);
     }
 }

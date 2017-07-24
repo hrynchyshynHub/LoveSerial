@@ -18,4 +18,10 @@
     <color name="base">#AAAAAA</color>
     <color name="iron">#CCCCCC</color>
     <color name="white">#FFFFFF</color>
+    <color name="primary_material_light_1">#fac607</color>
+    <color name="primary_material_light_2">#fbc103</color>
+    <color name="primary_dark_material_light">#f0a510</color>
+    <color name="accent_material_light">#141413</color>
+    <color name="background_material_light">#f4f9f8</color>
+    <color name="foreground_material_light">#f80202</color>
 </resources>

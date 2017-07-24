@@ -9,34 +9,35 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
-    <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/oil</item>
-        <item name="colorPrimaryDark">@android:color/holo_blue_bright</item>
+    <!--<style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowBackground">@color/oil</item>
-        <item name="colorControlNormal">@color/iron</item>
-        <item name="colorControlActivated">@color/white</item>
+        <item name="android:windowBackground">@color/primary</item>
         <item name="colorControlHighlight">@color/white</item>
         <item name="android:textColorHint">@color/iron</item>
         <item name="colorButtonNormal">@color/primary_darker</item>
-    </style>
+    </style>-->
 
     <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
         <item name="colorAccent">@color/white</item>
         <item name="android:textColorPrimary">@color/iron</item>
-        <item name="android:background">@color/primary</item>
-        <item name="android:windowContentTransitions">true</item>
+        <item name="android:background">@color/primary_material_light_2</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowContentTransitions">true</item>
-    </style>
+
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.AppCompat.Light.NoActionBar.NoActionBar" parent="Theme.AppCompat.NoActionBar" />
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimary">@color/primary_material_light_2</item>
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="android:colorForeground">@color/primary_material_light_2</item>
+        <item name="colorButtonNormal">@color/primary_material_light_2</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
 
 </resources>

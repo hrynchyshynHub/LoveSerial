@@ -13,8 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.vania.loveserials.fragments.MyProfileFragment;
 import com.example.vania.loveserials.fragments.SerialsListFragment;
@@ -43,8 +47,7 @@ public class NavigationMenu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent, ActivityOptions
-                .makeSceneTransitionAnimation(this).toBundle());
+        startActivity(intent);
         myProfileFragment = new MyProfileFragment();
         serialsListFragment = new SerialsListFragment();
     }
@@ -121,5 +124,72 @@ public class NavigationMenu extends AppCompatActivity
             editStatus.setFocusable(false);
         }
 
+    }
+    public void clickToAddPost(View view)
+    {
+        EditText editText = (EditText) findViewById(R.id.TextToPost);
+        if(!editText.getText().toString().equals("")) {
+            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.MainLinearLayout);
+
+
+            LinearLayout linearLayoutIn = new LinearLayout(this);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            layoutParams.setMargins(0, 20, 0, 0);
+            linearLayoutIn.setLayoutParams(layoutParams);
+            linearLayoutIn.setOrientation(LinearLayout.VERTICAL);
+
+            LinearLayout linearLayoutIn2 = new LinearLayout(this);
+            linearLayoutIn2.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            linearLayoutIn2.setOrientation(LinearLayout.HORIZONTAL);
+
+            LinearLayout linearLayoutIn3 = new LinearLayout(this);
+            linearLayoutIn3.setOrientation(LinearLayout.VERTICAL);
+            linearLayoutIn3.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+
+
+            ImageView imageView = new ImageView(this);
+            imageView.setImageResource(R.drawable.ic_launcher_post);
+            imageView.setLayoutParams(new LinearLayout.LayoutParams(75, 75));
+
+            LinearLayout linearLayoutIn4 = new LinearLayout(this);
+            linearLayoutIn4.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            linearLayoutIn4.setOrientation(LinearLayout.VERTICAL);
+
+            LinearLayout.LayoutParams layoutParams5 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            layoutParams5.setMargins(3, 0, 0, 0);
+            TextView textView = new TextView(this);
+            textView.setText("Vania Hrynchyshyn");
+            textView.setLayoutParams(layoutParams5);
+            textView.setTextSize(15);
+
+            LinearLayout.LayoutParams layoutParams6 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+            layoutParams6.setMargins(3, 15, 0, 0);
+            TextView textView2 = new TextView(this);
+            textView2.setText("5 mins ago");
+            textView2.setLayoutParams(layoutParams6);
+            textView2.setTextSize(10);
+
+            LinearLayout linearLayoutIn5 = new LinearLayout(this);
+            linearLayoutIn5.setOrientation(LinearLayout.VERTICAL);
+            linearLayoutIn5.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+
+            TextView textView3 = new TextView(this);
+            textView3.setText(editText.getText());
+            textView3.setTextSize(30);
+
+
+            linearLayout.addView(linearLayoutIn);
+            linearLayoutIn.addView(linearLayoutIn2);
+            linearLayoutIn2.addView(linearLayoutIn3);
+            linearLayoutIn3.addView(imageView);
+            linearLayoutIn2.addView(linearLayoutIn4);
+            linearLayoutIn4.addView(textView);
+            linearLayoutIn4.addView(textView2);
+            linearLayoutIn.addView(linearLayoutIn5);
+            linearLayoutIn5.addView(textView3);
+
+            editText.setText("");
+        }
     }
 }

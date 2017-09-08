@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    android:theme="@style/AppTheme.Dark"
+    android:theme="@style/LoveSerialTheme"
     >
 
     <group android:checkableBehavior="single"
        >
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/my_profile"
             android:icon="@mipmap/ic_launcher_house"
             android:title="@string/MainPage" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/search_serial"
             android:icon="@mipmap/ic_launcher_friends"
-            android:title="@string/feed" />
+            android:title="Пошук серіалів" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/friends"
             android:icon="@mipmap/ic_launcher_news"
-            android:title="@string/feed_from_serials" />
+            android:title="Пошук друзів" />
         <item
-            android:id="@+id/nav_serials"
+            android:id="@+id/news"
             android:icon="@mipmap/ic_launcher_groups"
-            android:title="@string/my_serials" />
+            android:title="Новини" />
     </group>
 
     <item android:title="Communicate">
@@ -30,7 +30,7 @@
                 android:icon="@mipmap/ic_launcher_settings"
                 android:title="Мої налаштування" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/exit"
                 android:icon="@mipmap/ic_launcher_exit"
                 android:title="Вихід" />
         </menu>

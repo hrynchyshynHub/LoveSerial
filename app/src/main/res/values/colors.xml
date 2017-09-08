@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#e9143b</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#7b796e</color>
     <color name="colorAccent">#FF4081</color>
     <color name="primary">#03a9f4</color>
     <color name="primary_dark">#e12929</color>
@@ -9,13 +9,15 @@
     <color name="accent">#FFFFFF</color>
     <color name="xhaki">#32CD32</color>
     <color name="lime">#00FF00</color>
+    <color name="halfwhite">#80ffffff</color>
     <color name="black">#000000</color>
+    <color name="dodgerblue">#1E90FF</color>
     <color name="jet">#222222</color>
     <color name="oil">#2b2a2a</color>
     <color name="monsoon">#777777</color>
     <color name="jumbo">#888888</color>
     <color name="aluminum">#999999</color>
-    <color name="base">#AAAAAA</color>
+    <color name="base">#aaaaaa</color>
     <color name="iron">#CCCCCC</color>
     <color name="white">#FFFFFF</color>
     <color name="primary_material_light_1">#fac607</color>
@@ -23,5 +25,7 @@
     <color name="primary_dark_material_light">#f0a510</color>
     <color name="accent_material_light">#141413</color>
     <color name="background_material_light">#f4f9f8</color>
+    <color name="ourfirst">#373737</color>
+    <color name="oursecond">#545454</color>
     <color name="foreground_material_light">#f80202</color>
 </resources>
